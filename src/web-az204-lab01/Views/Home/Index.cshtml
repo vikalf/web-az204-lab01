@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Hello World from Azure Lab 01</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Summary</td>
+                <td>TemperatureC</td>
+                <td>TemperatureF</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Forecasts)
+            {
+            <tr>
+                <td>@item.Summary</td>
+                <td>@item.TemperatureC</td>
+                <td>@item.TemperatureF</td>
+                <td>@item.Date</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
